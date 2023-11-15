@@ -1,0 +1,64 @@
+@use './partial/varibils' as*;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure {
+    display: block;
+    width: 100%;
+}
+
+figure > img {
+	display: block;
+	width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol, menu {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.container-xxl {
+    max-width: 1786px;
+    margin: 0 auto;
+}
+
+.container-xl {
+    max-width: 1696px;
+    margin: 0 auto;
+}
+
+.container-lg {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row [class^="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.body {
+    font-family: 'Roboto Mono', monospace;
+}
