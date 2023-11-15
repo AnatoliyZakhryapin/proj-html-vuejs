@@ -40,11 +40,20 @@ export default {
     <header class="page-header">
         <div class="container-xxl">
             <div class="row">
-                <div class="col">Logo</div>
+                <!-- LOGO -->
+                <div class="col">
+                    <figure>
+                        <img class="logo" src="/img/logo-img-01.png" alt="">
+                    </figure>
+                </div>
+                <!-- NAVIGATION BAR -->
                 <div class="col">
                     <div class="nav-bar">
+                        <!-- NAV-MENU -->
                         <div class="nav-menu">menu</div>
+                        <!-- INPUT SEARCH -->
                         <div class="input">input</div>
+                        <!-- SECONDARY MENU -->
                         <div class="menu">menu sec</div>
                     </div>
                 </div>
@@ -53,11 +62,17 @@ export default {
     </header>
 </template>
 
-<style scoped>
-    .row {
-        justify-content: space-between;
-    }
-    .nav-bar {
-        display: flex;
+<style lang="scss" scoped>
+    .page-header {
+        padding: 40px 0px;
+        .row {
+            justify-content: space-between;
+            .logo {
+                width: 140px;
+            }
+            .nav-bar {
+                display: flex;
+            }
+        }
     }
 </style>
