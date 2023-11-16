@@ -164,28 +164,28 @@ export default {
                         }
                     }
                 }
-                    .btn {
-                        @include btn;
-                        &.btn-1:hover {
-                            .arrow {
-                                transform: translateX(-13px);
-                                border-color: transparent;
-                            }
+                .btn {
+                    @include btn;
+                    &.btn-1:hover {
+                        .arrow {
+                            transform: translateX(-13px);
+                            border-color: transparent;
                         }
-                        &.btn-2:hover {
-                            .arrow {
-                                transform: translateX(-13px);
-                                border-color: transparent;
-                            }
                     }
-                    .btn.btn-1 {
+                    &.btn-2:hover {
+                        .arrow {
+                            transform: translateX(-13px);
+                            border-color: transparent;
+                        }
+                    }
+                    &.btn-1 {
                         background-color: $bg-white-1;
                         color: $f-black-1;
                         .arrow {
                             border-left: 1px solid $border-black-1;
                         }
                     }
-                    .btn.btn-2 {
+                    &.btn-2 {
                         background-color: $bg-orange;
                         color: $f-white-1;
                         .arrow {
@@ -193,7 +193,7 @@ export default {
                         }
                     }
                 }
-                }
+            }
         }
     }
 </style>
