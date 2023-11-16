@@ -140,6 +140,7 @@ export default {
                     flex-wrap: nowrap;
                     .col.content-box {
                         flex-grow: 1;
+                        margin-top: 130px;
                         .content {
                             margin-bottom: 40px;
                         }
