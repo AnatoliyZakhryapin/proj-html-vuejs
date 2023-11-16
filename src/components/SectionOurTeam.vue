@@ -13,7 +13,9 @@ export default {
 </script>
 
 <template>
-    <Slider/>
+    <section class="OurTeam">
+        <Slider/>
+    </section>
 </template>
 
 <style scoped>
