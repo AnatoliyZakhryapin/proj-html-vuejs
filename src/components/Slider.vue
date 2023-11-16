@@ -157,11 +157,13 @@ export default {
                                 background-color: #FF4612;
                                 border-radius: 999px;
                                 position: absolute;
-                                bottom: 7px;
-                                right: -16px;
+                                bottom: 0%;
+                                right: -7%;
+                                transform: translate(-50%, -50%);
                             }
                         }
                     }
+                }
                     .btn {
                         @include btn;
                         &.btn-1:hover {
@@ -175,7 +177,6 @@ export default {
                                 transform: translateX(-13px);
                                 border-color: transparent;
                             }
-                        }
                     }
                     .btn.btn-1 {
                         background-color: $bg-white-1;
@@ -193,7 +194,6 @@ export default {
                     }
                 }
                 }
-            }
         }
     }
 </style>
