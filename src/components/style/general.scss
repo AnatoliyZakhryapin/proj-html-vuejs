@@ -64,29 +64,35 @@ a {
 }
 
 // HEADER
-.nav-menu .menu {
-    display: flex;
-    gap: 40px;
-    font-family: $f-family-Roboto;
-    font-weight: 800;
-    padding: 0px 20px 0px 40px;
-    & a {
-        text-transform: uppercase;
-        position: relative;
-        & .arrow {
-            display: none;
-            align-items: center;
-            height: 100%;
-            position: absolute;
-            transform: translate(-100%, 0%);
-            left: -5px;
-            
+.nav-bar {
+    .nav-menu .menu {
+        display: flex;
+        gap: 40px;
+        font-family: $f-family-Roboto;
+        font-weight: 800;
+        padding: 0px 20px 0px 40px;
+        & a {
+            text-transform: uppercase;
+            position: relative;
+            & .arrow {
+                display: none;
+                align-items: center;
+                height: 100%;
+                position: absolute;
+                transform: translate(-100%, 0%);
+                left: -5px;
+            }
+            &:hover{
+                color: $f-orange-1;
+                .arrow {
+                    display: flex;
+                }
+            }
         }
     }
-    .menu-item a:hover{
+    .input:hover,
+    .menu-secondary:hover {
         color: $f-orange-1;
-        .arrow {
-            display: flex;
-        }
+        cursor: pointer;
     }
 }

@@ -64,7 +64,9 @@ export default {
                             <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
                         </div>
                         <!-- SECONDARY MENU -->
-                        <div class="menu">menu sec</div>
+                        <div class="menu-secondary">
+                            <font-awesome-icon icon="fa-solid fa-list" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@ export default {
                 .input {
                     padding: 0px 15px;
                 }
-                .menu {
+                .menu-secondary {
                     padding: 0px 20px;
                 }
             }
