@@ -85,7 +85,7 @@ export default {
             }
             .nav-bar {
                 display: flex;
-                align-items: center;
+                align-items: baseline;
 
                 .input {
                     padding: 0px 15px;
