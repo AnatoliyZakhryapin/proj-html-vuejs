@@ -38,5 +38,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+    @use './style/partial/varibils' as*;
+    .menu *{
+        font-family: $f-family-Roboto;
+    }
 </style>

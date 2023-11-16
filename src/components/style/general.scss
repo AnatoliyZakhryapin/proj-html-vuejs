@@ -4,6 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $f-family-Noto;
+    .title {
+        color: $f-black-1;
+    }
+    p.text {
+        color: $f-gray-2;
+    }
 }
 
 figure {
@@ -57,10 +64,6 @@ a {
 .row [class^="col"] {
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.body {
-    font-family: $f-family-Noto;
 }
 
 // HEADER
