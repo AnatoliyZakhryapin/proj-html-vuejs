@@ -89,6 +89,7 @@ export default {
 
                 .input {
                     padding: 0px 15px;
+                    transform: rotatey(180deg);
                 }
                 .menu-secondary {
                     padding: 0px 20px;
