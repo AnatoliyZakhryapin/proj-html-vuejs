@@ -62,3 +62,15 @@ a {
 .body {
     font-family: $f-family-Noto;
 }
+
+// HEADER
+.nav-menu .menu {
+    display: flex;
+    gap: 40px;
+    font-family: $f-family-Roboto;
+    font-weight: 800;
+    padding: 0px 20px 0px 40px;
+    & a {
+        text-transform: uppercase;
+    }
+}

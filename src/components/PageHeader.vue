@@ -1,4 +1,5 @@
 <script>
+import PageMenu from './PageMenu.vue';
 
 export default {
     data() {
@@ -32,6 +33,9 @@ export default {
                 ]
             }
         }
+    },
+    components: {
+        PageMenu,
     }
 }
 </script>
@@ -50,7 +54,11 @@ export default {
                 <div class="col">
                     <div class="nav-bar">
                         <!-- NAV-MENU -->
-                        <div class="nav-menu">menu</div>
+                        <div class="nav-menu">
+                            <PageMenu
+                                :links="navMenu.links"
+                            />
+                        </div>
                         <!-- INPUT SEARCH -->
                         <div class="input">input</div>
                         <!-- SECONDARY MENU -->
@@ -75,4 +83,5 @@ export default {
             }
         }
     }
+
 </style>
