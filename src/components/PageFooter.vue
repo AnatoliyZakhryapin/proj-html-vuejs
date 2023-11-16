@@ -1,5 +1,4 @@
 <script>
-
 export default {
     data() {
         return {
@@ -15,5 +14,7 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" lscoped>
+    @use './style/partial/varibils' as*;
+    @use './style/partial/mixins' as*;
 </style>

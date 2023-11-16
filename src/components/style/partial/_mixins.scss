@@ -15,3 +15,12 @@
         padding-left: 10px;
     }
 }
+
+@mixin after-line {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    background-color: $border-orange-1;
+    width: 65px;
+}

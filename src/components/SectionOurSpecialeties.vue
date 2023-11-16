@@ -65,9 +65,10 @@ export default {
         background-color: $bg-white-1;
     }
     .row:has(> .col .section-description) {
+        flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         .title {
             font-size: $f-st-2;
             line-height:  $f-st-2;
@@ -85,6 +86,12 @@ export default {
                 right: -4%;
                 transform: translate(-50%, -50%);
             }
+        }
+        .text {
+            margin-bottom: 30px;
+        }
+        &::after {
+            @include after-line;
         }
     }
     .row:has(> .col .card) {
