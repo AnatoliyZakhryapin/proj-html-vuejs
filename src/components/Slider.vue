@@ -151,46 +151,47 @@ export default {
                             position: relative;
                             display: inline-block;
                             .dot {
-                                height: 12px;
-                                width: 12px;
+                                height: 20%;
+                                aspect-ratio: 1;
                                 display: inline-block;
-                                background-color: $f-orange-1;
+                                background-color: #FF4612;
                                 border-radius: 999px;
                                 position: absolute;
                                 bottom: 7px;
                                 right: -16px;
                             }
                         }
-                        .btn {
-                            @include btn;
-                            &.btn-1:hover {
-                                .arrow {
-                                    transform: translateX(-13px);
-                                    border-color: transparent;
-                                }
-                            }
-                            &.btn-2:hover {
-                                .arrow {
-                                    transform: translateX(-13px);
-                                    border-color: transparent;
-                                }
+                    }
+                    .btn {
+                        @include btn;
+                        &.btn-1:hover {
+                            .arrow {
+                                transform: translateX(-13px);
+                                border-color: transparent;
                             }
                         }
-                        .btn.btn-1 {
-                            background-color: $bg-white-1;
-                            color: $f-black-1;
+                        &.btn-2:hover {
                             .arrow {
-                                border-left: 1px solid $border-black-1;
-                            }
-                        }
-                        .btn.btn-2 {
-                            background-color: $bg-orange;
-                            color: $f-white-1;
-                            .arrow {
-                                border-left: 1px solid $border-white-1;
+                                transform: translateX(-13px);
+                                border-color: transparent;
                             }
                         }
                     }
+                    .btn.btn-1 {
+                        background-color: $bg-white-1;
+                        color: $f-black-1;
+                        .arrow {
+                            border-left: 1px solid $border-black-1;
+                        }
+                    }
+                    .btn.btn-2 {
+                        background-color: $bg-orange;
+                        color: $f-white-1;
+                        .arrow {
+                            border-left: 1px solid $border-white-1;
+                        }
+                    }
+                }
                 }
             }
         }
