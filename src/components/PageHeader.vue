@@ -76,6 +76,9 @@ export default {
 
 <style lang="scss" scoped>
     .page-header {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
         padding: 40px 0px;
         .row {
             justify-content: space-between;
