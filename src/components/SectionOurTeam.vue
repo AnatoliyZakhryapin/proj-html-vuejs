@@ -1,6 +1,5 @@
 <script>
-import SectionOurTeam from './SectionOurTeam.vue';
-
+import Slider from './Slider.vue';
 export default {
     data() {
         return {
@@ -8,13 +7,13 @@ export default {
         }
     },
     components: {
-        SectionOurTeam,
+        Slider,
     }
 }
 </script>
 
 <template>
-    <SectionOurTeam/>
+    <Slider/>
 </template>
 
 <style scoped>

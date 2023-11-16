@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $f-family-Noto;
+    font-size: $f-s-1;
     .title {
         color: $f-black-1;
     }
@@ -61,6 +62,10 @@ a {
     flex-wrap: wrap;
 }
 
+.col-6 {
+    width: calc(100% * 6 / 12);
+}
+
 .row [class^="col"] {
     padding-left: 10px;
     padding-right: 10px;
@@ -98,4 +103,23 @@ a {
         color: $f-orange-1;
         cursor: pointer;
     }
+}
+
+// debuG
+
+
+.debug .container-xxl {
+    border: 3px solid rgb(0, 132, 255);
+}
+
+.debug .container-lg {
+    border: 3px solid orange;
+}
+
+.debug .row {
+    border: 2px solid fuchsia;
+}
+
+.debug .col {
+    border: 1px solid green;
 }

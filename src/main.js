@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { 
     faArrowRightLong as fasArrowRightLong,
+    faArrowLeftLong as fasArrowLeftLong,
     faMagnifyingGlass as fasMagnifyingGlass,
     faList as fasList,
 } from '@fortawesome/free-solid-svg-icons'
@@ -14,6 +15,7 @@ import {
 
 library.add(
     fasArrowRightLong,
+    fasArrowLeftLong,
     fasMagnifyingGlass,
     fasList,
 	)

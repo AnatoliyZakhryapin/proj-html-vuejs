@@ -1,0 +1,17 @@
+@use './varibils' as*;
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    line-height: 35px;
+    font-size: $f-s-4;
+    text-transform: uppercase;
+    .text {
+        padding: 0px 25px;
+        font-family: $f-family-Roboto;
+    }
+    .arrow {
+        padding-left: 10px;
+    }
+}
