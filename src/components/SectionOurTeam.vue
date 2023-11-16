@@ -13,10 +13,13 @@ export default {
 </script>
 
 <template>
-    <section class="OurTeam">
+    <section class="our-team">
         <Slider/>
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+    .our-team {
+        margin-bottom: -75px;
+    }
 </style>
