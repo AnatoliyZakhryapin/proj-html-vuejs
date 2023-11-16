@@ -20,7 +20,11 @@ export default {
                 class="text" 
                 :href="link.href"
             >
-            {{ link.text }}
+                <span class="arrow">
+                    <!-- &#10230; -->
+                    <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+                </span>
+                {{ link.text }}
             </a>
             <a  
                 v-if="link.icon"

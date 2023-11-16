@@ -75,6 +75,7 @@ export default {
         padding: 40px 0px;
         .row {
             justify-content: space-between;
+            align-items: center;
             .logo {
                 width: 140px;
             }
@@ -83,5 +84,6 @@ export default {
             }
         }
     }
+
 
 </style>
