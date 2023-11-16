@@ -36,23 +36,31 @@ export default {
 
 <template>
     <section class="OurSpecialeties"> 
+        <!-- SECTION DESCRIPTION -->
         <div class="container-xxl">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col">
-                        <div class="section-description">
-                            <h2 class="title">Our specialeties<span class="dot"></span></h2>
-                            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+            <div class="row">
+                <div class="col">
+                    <div class="bg-box">
+                        <div class="container-lg">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="section-description">
+                                        <h2 class="title">Our specialeties<span class="dot"></span></h2>
+                                        <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" v-for="card in cards">
+                                    <Card :card="card"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" v-for="card in cards">
-                        <Card :card="card"/>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- PREVIEW SPECIALETES -->
     </section>
 </template>
 
@@ -61,8 +69,12 @@ export default {
     @use './style/partial/mixins' as*;
   
     .container-xxl {
-        padding: 130px 0px;
+        position: relative;
+        z-index: 1;
+    }
+    .bg-box {
         background-color: $bg-white-1;
+        padding: 130px 0px;
     }
     .row:has(> .col .section-description) {
         flex-direction: column;
@@ -90,12 +102,13 @@ export default {
         .text {
             margin-bottom: 30px;
         }
-        &::after {
-            @include after-line;
-        }
     }
     .row:has(> .col .card) {
         justify-content: space-around;
+    }
+
+    .bg-box .row:first-child::after {
+      @include after-line;
     }
 
 
