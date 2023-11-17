@@ -101,7 +101,7 @@ export default {
                                 <figure>
                                     <img :src="card.src">
                                     <span class="badge">
-                                        <span></span>
+                                        <span><font-awesome-icon icon="fa-solid fa-tag" /></span>
                                         {{ returnBadge(card.badge) }}
                                     </span>
                                 </figure>
@@ -110,8 +110,8 @@ export default {
                                 <h3 class="title">{{ card.title }}</h3>
                                 <p class="text">{{ card.text }}</p>
                                 <p class="other">
-                                    <span>{{ card.date }}</span>
-                                    <span>{{ card.persone }}</span>
+                                    <p><span><font-awesome-icon icon="fa-regular fa-clock" /></span>{{ card.date }}</p>
+                                    <p><span><font-awesome-icon icon="fa-regular fa-user" /></span>{{ card.persone }}</p>
                                 </p>
                                 <div class="read-more">
                                     <a href=#>Read more</a>
@@ -183,11 +183,18 @@ export default {
                     line-height:  20px;
                     margin-bottom: 20px;
                 }
-                .other span{
-                    order: 1;
-                    display: inline-block;
-                    font-size: $f-s-4;
-                    line-height:  20px;
+                .other {
+                    display: flex;
+                    gap: 10px;
+                    & *{
+                        order: 1;
+                        font-size: $f-s-4;
+                        line-height:  20px;
+                    }
+                    span {
+                        margin-right: 5px;
+                        color: $f-orange-1;
+                    }
                 }
                 .read-more {
                     order: 4;
