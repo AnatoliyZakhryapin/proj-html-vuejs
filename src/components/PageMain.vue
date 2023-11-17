@@ -1,6 +1,7 @@
 <script>
 import SectionOurTeam from './SectionOurTeam.vue';
 import SectionOurSpecialeties from './SectionOurSpecialeties.vue'
+import SectionEventsCalender from './SectionEventsCalender.vue';
 
 export default {
     data() {
@@ -11,6 +12,7 @@ export default {
     components: {
         SectionOurTeam,
         SectionOurSpecialeties,
+        SectionEventsCalender,
     }
 }
 </script>
@@ -18,6 +20,7 @@ export default {
 <template>
     <SectionOurTeam/>
     <SectionOurSpecialeties/>
+    <SectionEventsCalender/>
 </template>
 
 <style scoped>
