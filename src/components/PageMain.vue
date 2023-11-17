@@ -5,6 +5,7 @@ import SectionEventsCalender from './SectionEventsCalender.vue';
 import SectionCreativeLeader from './SectionCreativeLeader.vue';
 import SectionLatestNews from './SectionLatestNews.vue';
 import SectionTestimonials from './SectionTestimonials.vue';
+import SectionVideoPlayer from './SectionVideoPlayer.vue';
 
 export default {
     data() {
@@ -13,13 +14,14 @@ export default {
         }
     },
     components: {
-        SectionOurTeam,
-        SectionOurSpecialeties,
-        SectionEventsCalender,
-        SectionCreativeLeader,
-        SectionLatestNews,
-        SectionTestimonials
-    }
+    SectionOurTeam,
+    SectionOurSpecialeties,
+    SectionEventsCalender,
+    SectionCreativeLeader,
+    SectionLatestNews,
+    SectionTestimonials,
+    SectionVideoPlayer
+}
 }
 </script>
 
@@ -30,6 +32,7 @@ export default {
     <SectionCreativeLeader/>
     <SectionLatestNews/>
     <SectionTestimonials/>
+    <SectionVideoPlayer/>
 </template>
 
 <style scoped>
