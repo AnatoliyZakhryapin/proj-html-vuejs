@@ -1,11 +1,12 @@
 <script>
+import FormContactUs from './FormContactUs.vue';
+
     export default {
-        data() {
-            return {
-                
-            }
-        }
-    }
+    data() {
+        return {};
+    },
+    components: { FormContactUs }
+}
 </script>
 
 <template>
@@ -48,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    form
+                    <FormContactUs/>
                 </div>
         </div>
         </div>
