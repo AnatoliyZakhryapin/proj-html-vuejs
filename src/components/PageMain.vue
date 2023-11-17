@@ -6,6 +6,7 @@ import SectionCreativeLeader from './SectionCreativeLeader.vue';
 import SectionLatestNews from './SectionLatestNews.vue';
 import SectionTestimonials from './SectionTestimonials.vue';
 import SectionVideoPlayer from './SectionVideoPlayer.vue';
+import SectionContactUs from './SectionContactUs.vue';
 
 export default {
     data() {
@@ -20,7 +21,8 @@ export default {
     SectionCreativeLeader,
     SectionLatestNews,
     SectionTestimonials,
-    SectionVideoPlayer
+    SectionVideoPlayer,
+    SectionContactUs
 }
 }
 </script>
@@ -33,6 +35,7 @@ export default {
     <SectionLatestNews/>
     <SectionTestimonials/>
     <SectionVideoPlayer/>
+    <SectionContactUs/>
 </template>
 
 <style scoped>
