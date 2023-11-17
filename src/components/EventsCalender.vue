@@ -48,7 +48,9 @@
                             {{ getData(event.date).day}}/{{ getData(event.date).mounth}}/{{ getData(event.date).year}}
                         </div>
                         <div class="place">{{ event.place }}</div>
-                        <div class="other">Read More</div>
+                        <div class="read-more">
+                            <a href=#>Read more</a>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -103,10 +105,12 @@
                     font-size: $f-s-4;
                 }
 
-                .other {
-                    font-size:  $f-s-2;
+                .read-more {
                     font-weight: bold;
                     text-transform: uppercase;
+                    a {
+                        font-size:  $f-s-3;
+                    }
                 }
             }
 
