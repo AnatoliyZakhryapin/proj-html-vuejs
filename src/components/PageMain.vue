@@ -4,6 +4,7 @@ import SectionOurSpecialeties from './SectionOurSpecialeties.vue'
 import SectionEventsCalender from './SectionEventsCalender.vue';
 import SectionCreativeLeader from './SectionCreativeLeader.vue';
 import SectionLatestNews from './SectionLatestNews.vue';
+import SectionTestimonials from './SectionTestimonials.vue';
 
 export default {
     data() {
@@ -17,6 +18,7 @@ export default {
         SectionEventsCalender,
         SectionCreativeLeader,
         SectionLatestNews,
+        SectionTestimonials
     }
 }
 </script>
@@ -27,6 +29,7 @@ export default {
     <SectionEventsCalender/>
     <SectionCreativeLeader/>
     <SectionLatestNews/>
+    <SectionTestimonials/>
 </template>
 
 <style scoped>
