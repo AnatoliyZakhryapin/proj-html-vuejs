@@ -95,6 +95,9 @@ import EventsCalender from './EventsCalender.vue';
     .events-calander{
         position: relative;
         display: flex;
+        .events-images {
+            flex-grow: 1;
+        }
     }
     .events {
         position: absolute;
