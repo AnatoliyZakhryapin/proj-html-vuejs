@@ -1,11 +1,47 @@
 <script>
+import SliderCardTripl from './SliderCardTripl.vue';
+
     export default {
-        data() {
-            return {
-                
-            }
-        }
-    }
+    data() {
+        return {
+            cardsNews: [
+                {
+                    src: "/img/h1-blog-img-01.jpg",
+                    title: "Next investiment",
+                    text: "                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ex ullam dolorem, consequuntur neque eum libero vel odit veniam sapiente in veritatis delectus consectetur voluptas repellendus. Exercitationem quis velit numquam?",
+                    date: "05/05/2019",
+                    persone: "Amanda Doe",
+                    badge: ["Business, Leading"]
+                },
+                {
+                    src: "/img/h1-blog-img-02.jpg",
+                    title: "Team Bulding",
+                    text: "                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ex ullam dolorem, consequuntur neque eum libero vel odit veniam sapiente in veritatis delectus consectetur voluptas repellendus. Exercitationem quis velit numquam?",
+                    date: "05/05/2019",
+                    persone: "Amanda Doe",
+                    badge: ["Business, Leading"]
+                },
+                {
+                    src: "/img/h1-blog-img-03.jpg",
+                    title: "New Business day",
+                    text: "                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ex ullam dolorem, consequuntur neque eum libero vel odit veniam sapiente in veritatis delectus consectetur voluptas repellendus. Exercitationem quis velit numquam?",
+                    date: "05/05/2019",
+                    persone: "Amanda Coe",
+                    badge: ["Business, Leading"]
+                },
+                {
+                    src: "/img/h1-blog-img-04.jpg",
+                    title: "Next meeting",
+                    text: "                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ex ullam dolorem, consequuntur neque eum libero vel odit veniam sapiente in veritatis delectus consectetur voluptas repellendus. Exercitationem quis velit numquam?",
+                    date: "05/05/2019",
+                    persone: "Amanda Coe",
+                    badge: ["Business, Leading"]
+                },
+            ]
+        };
+    },
+    components: { SliderCardTripl }
+}
 </script>
 
 <template>
@@ -19,7 +55,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <SliderCardTripl :slides="cardsNews"/>
+                </div>
+            </div>
         </div>
+
     </section>
 </template>
 
@@ -29,12 +71,15 @@
 
     .latest-news {
         padding: 130px 0px;
+        .container-xl {
+            position: relative;
+        }
         .row {
             justify-content: center;
             text-align: center;
             row-gap: 70px;
             .section-header {
-                margin-bottom: 20px;
+                margin-bottom: 70px;
                 &::after {
                     @include after-line;
                 }
@@ -60,9 +105,6 @@
                     margin-bottom: 20px;
                 }
             }
-            
         }
     }
-
-    
 </style>
