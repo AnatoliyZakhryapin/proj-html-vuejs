@@ -99,6 +99,9 @@
                 .title {
                     font-size:  $f-st-4;
                     font-weight: bold;
+                    &:hover {
+                        color: $f-orange-1;
+                    }
                 }
 
                 .date, .place {
