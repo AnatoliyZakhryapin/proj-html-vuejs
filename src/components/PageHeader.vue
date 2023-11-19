@@ -5,6 +5,7 @@ export default {
     data() {
         return {
             navMenu: {
+                arrow: true,
                 links: [
                     {
                         text: "Homes",
@@ -57,6 +58,7 @@ export default {
                         <div class="nav-menu">
                             <PageMenu
                                 :links="navMenu.links"
+                                :arrow="navMenu.arrow"
                             />
                         </div>
                         <!-- INPUT SEARCH -->
