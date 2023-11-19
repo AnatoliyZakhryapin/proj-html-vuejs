@@ -1,11 +1,35 @@
 <script>
+import ClientCarousel from './ClientCarousel.vue';
 import FormContactUs from './FormContactUs.vue';
 
     export default {
     data() {
-        return {};
+        return {
+            partners: [
+                {
+                    src: "/img/h4-clients-img-01.png",
+                    srcOver: "/img/h4-clients-img-02.png"
+                },
+                {
+                    src: "/img/h4-clients-img-03.png",
+                    srcOver: "/img/h4-clients-img-04-1.png"
+                },
+                {
+                    src: "/img/h4-clients-img-05.png",
+                    srcOver: "/img/h4-clients-img-06-1.png"
+                },
+                {
+                    src: "/img/h4-clients-img-07.png",
+                    srcOver: "/img/h4-clients-img-08-1.png"
+                },
+                {
+                    src: "/img/h4-clients-img-09.png",
+                    srcOver: "/img/h4-clients-img-10-1.png"
+                }
+            ]
+        };
     },
-    components: { FormContactUs }
+    components: { FormContactUs, ClientCarousel }
 }
 </script>
 
@@ -51,7 +75,12 @@ import FormContactUs from './FormContactUs.vue';
                 <div class="col-6">
                     <FormContactUs/>
                 </div>
-        </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ClientCarousel :partnersList="partners"/>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -62,6 +91,12 @@ import FormContactUs from './FormContactUs.vue';
 
     .contact-us {
         padding: 130px 0px;
+        
+        .container-lg {
+            display: flex;
+            row-gap: 130px;
+            flex-direction: column;
+        }
         .map {
             position: relative;
             .contact {
