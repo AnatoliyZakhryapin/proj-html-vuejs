@@ -205,7 +205,6 @@ export default {
 
     }
    
-
     .icon-menu .menu {
         display: flex;
         gap: 20px;
@@ -219,6 +218,7 @@ export default {
             border-radius: 50%;
             background-color: $f-white-1;
             color: $bg-black-6;
+           
         }
     }
 </style>

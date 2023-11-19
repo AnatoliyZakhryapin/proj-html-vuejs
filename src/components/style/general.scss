@@ -200,7 +200,16 @@ body {
     .icon {
         color: $bg-orange;
     }
-
+    .icon-menu .menu .menu-item:hover a {
+        background-color: $bg-orange;
+        scale: 1.2;
+    }
+    .twitter .icon a:hover svg{
+        scale: 1.4;
+    }
+    .contact-me li:hover a.icon svg{
+        scale: 1.4;
+    }
 }
 
 
