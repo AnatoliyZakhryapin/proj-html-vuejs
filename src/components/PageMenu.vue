@@ -12,7 +12,7 @@ export default {
             required: false
         }, 
         arrow: {
-            type: String,
+            type: Boolean,
             required: false
         }, 
         links: Array,
@@ -21,6 +21,8 @@ export default {
         isActive(index) {
             if(index === this.activeIndex) {
                 return true
+            } else {
+                return false
             }
         },
         getActive(index) {
