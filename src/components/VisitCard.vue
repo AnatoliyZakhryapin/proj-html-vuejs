@@ -88,6 +88,10 @@ export default {
                 border-radius: 50%;
                 background-color: $bg-orange;
                 color: $f-white-1;
+                &:hover {
+                    background-color: $bg-black-1;
+                    scale: 1.2;
+                }
             }
         }
     }
