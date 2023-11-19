@@ -10,7 +10,10 @@ import {
     faMagnifyingGlass as fasMagnifyingGlass,
     faList as fasList,
     faTag as fasTag,
-    faPlay as fasPlay
+    faPlay as fasPlay,
+    faLocationDot as fasLocationDot,
+    faPhone as fasPhone,
+    faEnvelope as fasEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
@@ -21,7 +24,7 @@ import {
 import {
     faLinkedinIn as fabLinkedinIn,
     faFacebookF as fabFacebookF,
-    faTwitter as fabTwitter
+    faTwitter as fabTwitter,
 	} from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -35,6 +38,9 @@ library.add(
     farClock,
     farUser,
     fasTag,
-    fasPlay
+    fasPlay,
+    fasLocationDot,
+    fasPhone,
+    fasEnvelope,
 	)
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
