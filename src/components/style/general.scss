@@ -134,6 +134,18 @@ body {
     }
 
 }
+
+// HOVER
+
+.page-header {
+    li:hover {
+        scale: 1.2;
+    }
+    svg:hover {
+        scale: 1.2;
+    }
+}
+
 // debuG
 
 
