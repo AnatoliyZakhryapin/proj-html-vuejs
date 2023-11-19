@@ -95,6 +95,14 @@ body {
         font-family: $f-family-Roboto;
         font-weight: 800;
         padding: 0px 20px 0px 40px;
+        li.active::after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            height: 2px;
+            background-color: #FF4612;
+            width: 100%;
+        }
         & a {
             text-transform: uppercase;
             position: relative;
