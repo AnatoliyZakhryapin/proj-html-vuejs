@@ -53,7 +53,14 @@ export default {
             },
         };
     },
-    components: { PageMenu }
+    components: { PageMenu },
+    methods: {
+        scrollWin() {
+            let yDistance = window.screen.height * 0.48
+            console.log(yDistance)
+            window.scrollBy(0, -yDistance);
+        },
+    }
 }
 </script>
 
@@ -147,7 +154,10 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>    
+        </div> 
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>   
    </section>
 </template>
 
@@ -155,6 +165,7 @@ export default {
     @use './style/partial/varibils' as*;
     @use './style/partial/mixins' as*;
     .page-footer {
+        position: relative;
         padding: 130px 0px;
         background-color: $bg-black-6;
         color: $f-gray-2;
@@ -221,5 +232,11 @@ export default {
            
         }
     }
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+    }
+
 </style>
 

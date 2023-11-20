@@ -40,7 +40,14 @@ import SliderCardTripl from './SliderCardTripl.vue';
             ]
         };
     },
-    components: { SliderCardTripl }
+    components: { SliderCardTripl },
+    methods: {
+        scrollWin() {
+            let yDistance = window.screen.height * 0.7
+            console.log(yDistance)
+            window.scrollBy(0, -yDistance);
+        },
+    }
 }
 </script>
 
@@ -61,7 +68,9 @@ import SliderCardTripl from './SliderCardTripl.vue';
                 </div>
             </div>
         </div>
-
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
     </section>
 </template>
 
@@ -71,6 +80,7 @@ import SliderCardTripl from './SliderCardTripl.vue';
 
     .latest-news {
         padding: 130px 0px;
+        position: relative;
         .container-xl {
             position: relative;
         }
@@ -106,5 +116,11 @@ import SliderCardTripl from './SliderCardTripl.vue';
                 }
             }
         }
+    }
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+        border: 1px solid $f-gray-1;
     }
 </style>

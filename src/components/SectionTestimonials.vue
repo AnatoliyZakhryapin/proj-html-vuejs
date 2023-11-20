@@ -23,7 +23,14 @@ import SliderCardOne from './SliderCardOne.vue';
             ]
         };
     },
-    components: { SliderCardOne}
+    components: { SliderCardOne},
+    methods: {
+        scrollWin() {
+            let yDistance = window.screen.height * 0.65
+            console.log(yDistance)
+            window.scrollBy(0, -yDistance);
+        },
+    }
 }
 </script>
 
@@ -38,6 +45,9 @@ import SliderCardOne from './SliderCardOne.vue';
                     <SliderCardOne :slides="cardsTestimonials"/>
                 </div>
             </div>
+        </div>
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
         </div>
     </section>
 </template>
@@ -85,4 +95,9 @@ import SliderCardOne from './SliderCardOne.vue';
             }
         }
     }
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+    } 
 </style>

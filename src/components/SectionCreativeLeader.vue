@@ -25,6 +25,13 @@
         },
         components: {
             ProgressCard
+        },
+        methods: {
+            scrollWin() {
+                let yDistance = window.screen.height * 0.73
+                console.log(yDistance)
+                window.scrollBy(0, -yDistance);
+            },
         }
     }
 </script>
@@ -51,6 +58,9 @@
                 </div>
             </div>
         </div>
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
     </section>
 </template>
 
@@ -61,6 +71,7 @@
     .creativeLeader {
         background-color: $bg-white-1;
         padding: 130px 0px;
+        position: relative;
         .content {
             display: flex;
             flex-direction: column;
@@ -98,6 +109,10 @@
         }
         }
     }
-
-   
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+        border: 1px solid $f-gray-1;
+    }
 </style>

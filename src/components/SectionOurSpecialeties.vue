@@ -60,13 +60,18 @@ export default {
             console.log("index to come",index)
             this.currentIndex = index;
             console.log("index to save",this.currentIndex)
-        }
+        },
+        scrollWin() {
+            let yDistance = window.screen.height * 0.73
+            console.log(yDistance)
+            window.scrollBy(0, -yDistance);
+        },
     }
 }
 </script>
 
 <template>
-    <section class="OurSpecialeties"> 
+    <section class="our-specialeties"> 
         <!-- SECTION DESCRIPTION -->
         <div class="container-xxl">
             <div class="row">
@@ -118,13 +123,34 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
+        <div class="scroll-icon icon-2" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
     @use './style/partial/varibils' as*;
     @use './style/partial/mixins' as*;
-  
+    .our-specialeties{
+        position: relative;
+        .scroll-icon {
+            position: absolute;
+            right: 2%;
+            bottom: 55%;
+            border: 1px solid $f-gray-1;
+            z-index: 10;
+        }
+        .scroll-icon.icon-2 {
+            position: absolute;
+            right: 2%;
+            bottom: 5%;
+            border: 1px solid $f-gray-1;
+        }
+    }
     .container-xxl {
         position: relative;
         z-index: 1;
@@ -198,4 +224,5 @@ export default {
             }
        }
     }
+  
 </style>

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { 
     faArrowRightLong as fasArrowRightLong,
     faArrowLeftLong as fasArrowLeftLong,
+    faArrowUpLong as fasArrowUpLong,
     faMagnifyingGlass as fasMagnifyingGlass,
     faList as fasList,
     faTag as fasTag,
@@ -31,6 +32,7 @@ import {
 library.add(
     fasArrowRightLong,
     fasArrowLeftLong,
+    fasArrowUpLong,
     fasMagnifyingGlass,
     fasList,
     fabLinkedinIn,

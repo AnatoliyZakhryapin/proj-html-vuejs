@@ -213,7 +213,16 @@ body {
 }
 
 
-
+.scroll-icon {
+    width: 25px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $f-orange-1;
+}
 
 // debuG
 

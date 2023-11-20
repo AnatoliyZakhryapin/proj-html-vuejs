@@ -29,12 +29,19 @@ import FormContactUs from './FormContactUs.vue';
             ]
         };
     },
-    components: { FormContactUs, ClientCarousel }
+    components: { FormContactUs, ClientCarousel },
+    methods: {
+        scrollWin() {
+            let yDistance = window.screen.height * 0.69
+            console.log(yDistance)
+            window.scrollBy(0, -yDistance);
+        },
+    }
 }
 </script>
 
 <template>
-    <div class="contact-us">
+    <section class="contact-us">
         <div class="container-lg">
             <div class="row">
                 <div class="col-6">
@@ -82,7 +89,10 @@ import FormContactUs from './FormContactUs.vue';
                 </div>
             </div>
         </div>
-    </div>
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -91,6 +101,7 @@ import FormContactUs from './FormContactUs.vue';
 
     .contact-us {
         padding: 130px 0px;
+        position: relative;
         
         .container-lg {
             display: flex;
@@ -150,5 +161,11 @@ import FormContactUs from './FormContactUs.vue';
                 }
             }
         }
+    }
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+        border: 1px solid $f-gray-1;
     }
 </style>

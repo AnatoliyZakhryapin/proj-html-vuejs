@@ -9,13 +9,18 @@
             changePlayStatus() {
                 this.playIsActive = !this.playIsActive
             },
+            scrollWin() {
+                let yDistance = window.screen.height * 0.65
+                console.log(yDistance)
+                window.scrollBy(0, -yDistance);
+            },
         }
     }
 </script>
 
 <template>
     <section class="video-player" 
-        @click="changePlayStatus()"
+        @click.stop="changePlayStatus()"
     >
         <div class="containre-fluid">
             <figure>
@@ -33,6 +38,9 @@
                     src="/img/ajax-loader.gif"
                 >
             </div>
+        </div>
+        <div class="scroll-icon" @click.stop="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
         </div>
     </section>
 </template>
@@ -59,6 +67,11 @@
                     display: block;
                 }
             }
+        }
+        .scroll-icon {
+            position: absolute;
+            right: 2%;
+            bottom: 5%;
         }
     }
 

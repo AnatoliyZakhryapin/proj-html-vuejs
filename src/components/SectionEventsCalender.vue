@@ -57,7 +57,12 @@ import EventsCalender from './EventsCalender.vue';
             },
             clearInterval() {
                 clearInterval(this.idAutoPlay)
-            }
+            },
+            scrollWin() {
+                let yDistance = window.screen.height * 0.85
+                console.log(yDistance)
+                window.scrollBy(0, -yDistance);
+            },
         },
     }
 </script>
@@ -84,6 +89,9 @@ import EventsCalender from './EventsCalender.vue';
                     </div>
                 </div>
             </div>
+        <div class="scroll-icon" @click="scrollWin()">
+            <font-awesome-icon icon="fa-solid fa-arrow-up-long" />
+        </div>
     </section>
     
 </template>
@@ -109,5 +117,10 @@ import EventsCalender from './EventsCalender.vue';
             display: flex;
             align-items: center;
         }
+    }
+    .scroll-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
     }
 </style>
