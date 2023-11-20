@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            currentIndex: 0,
             firstIndex: 0,
             secondIndex: 1,
             thirdIndex: 2,
@@ -15,6 +16,12 @@ export default {
     },
     methods: {
         nextImage(){
+            if(this.currentIndex === this.slides.length - 1){
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
+
             if(this.firstIndex === this.slides.length - 1){
                 this.firstIndex = 0;
             } else {
@@ -32,14 +39,37 @@ export default {
             } else {
                 this.thirdIndex++
             }
-            console.log("1",this.firstIndex, "2",this.secondIndex,"3", this.thirdIndex)
+
+            console.log(this.currentIndex)
+            console.log("a",this.firstIndex, "b",this.secondIndex,"c", this.thirdIndex)
         },
         prevImage(){
+            if(this.currentIndex === 0){
+                this.currentIndex = this.slides.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+
             if(this.firstIndex === 0){
-                this.firstIndex = this.slides.length -1; 
+                this.firstIndex = this.slides.length - 1;
             } else {
                 this.firstIndex--;
             }
+
+            if(this.secondIndex === 0){
+                this.secondIndex = this.slides.length - 1;
+            } else {
+                this.secondIndex--;
+            }
+
+            if(this.thirdIndex === 0){
+                this.thirdIndex = this.slides.length - 1;
+            } else {
+                this.thirdIndex--;
+            }
+
+            console.log("prew",this.currentIndex)
+            console.log("prew","a",this.firstIndex, "b",this.secondIndex,"c", this.thirdIndex)
         },
         complexEmit() {
             const index = this.firstIndex;
@@ -48,28 +78,31 @@ export default {
         isActive(array, index) {
             const lengthArray = array.length;
             let isActive;
-            // console.log(lengthArray, index)
             if(lengthArray < 4){
                 return isActive = true
             } else if (index === this.firstIndex || index === this.secondIndex || index === this.thirdIndex ) {
                 return isActive = true
-            }  else {
-                // console.log(isActive)
+            } else {
                 return isActive = false
             }
         },
-        getOrder(index) {
+        getOrder(array, index) {
+            const arrayLength = array.length
             let order;
-            if(index = this.firstIndex){
-                order = 1;
-                return order;
-            } else if (index = this.secondIndex){
-                order = 2;
-                return order;
-            } else if (index = this.thirdIndex){
-                order = 3;
-                return order;
+            if(index === this.currentIndex) {
+                order = 1
+            } else if (index === this.currentIndex + 1 ) {
+                order = 2
+            } else if (index === this.currentIndex + 2) {
+                order = 3
+            } else if (index === 0 && this.currentIndex === arrayLength - 2) {
+                order = arrayLength
+            } else if (index === 1 && this.currentIndex === arrayLength - 1) {
+                order = this.currentIndex
+            } else if ( index === 0 && this.currentIndex === arrayLength - 1) {
+                order = this.currentIndex - 1
             }
+            return order;
         },
         returnBadge(badgeName) {
             let text= "";
@@ -93,7 +126,7 @@ export default {
                         class="slide" 
                         :class="isActive(slides, index) ? 'active' : ''"
                         v-if="isActive(slides, index)"
-                        :style="{ 'order': getOrder(index) }"
+                        :style="{ 'order': getOrder(slides,index) }"
                         >
                         <!-- CARD -->
                         <div class="card card-news">
